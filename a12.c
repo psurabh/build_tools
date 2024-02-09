@@ -13,11 +13,6 @@ int fibonacci(int n) {
     return 0;
 }
 
-int main() {
-    int n = 10; // number of terms to be printed
-    fibonacci(n);
-    return 0;
-}
 int isFibonacci(int n) {
     if (n <= 0)
         return 0;
@@ -29,6 +24,13 @@ int isFibonacci(int n) {
     }
     return nextTerm == n;
 }
+
+int main() {
+    int n = 10; // number of terms to be printed
+    fibonacci(n);
+    int testNumbers[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int size = sizeof(testNumbers) / sizeof(testNumbers[0]);
+    for (int i = 0; i < size; i++) {
         printf("%d is ", testNumbers[i]);
         if (!isFibonacci(testNumbers[i]))
             printf("not ");
