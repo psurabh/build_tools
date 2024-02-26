@@ -7,3 +7,16 @@ if __name__ == "__main__":
         print(f"{year} is a leap year.")
     else:
         print(f"{year} is not a leap year.")
+def validate_input(input):
+    try:
+        int(input)
+        return "Integer"
+    except ValueError:
+        return "String"
+        year = None
+    if is_leap_year(year):
+        print(f"{year} is a leap year.")
+    else:
+        print(f"{year} is not a leap year.")
+            print(f"{year} is not a leap year.")
+    print(f"{user_input} is a {input_type}.")
