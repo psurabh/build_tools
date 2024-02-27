@@ -2,28 +2,28 @@
 This file implements a binary search algorithm.
 """
 
-def binary_search(lst, key):
+def binary_search(sorted_list, search_key):
     """
     Perform a binary search on a sorted list.
 
     Parameters:
-    lst (list): The list to search.
-    key (int): The value to search for.
+    sorted_list (list): The sorted list to search.
+    search_key (int): The value to search for.
 
     Returns:
     int: The index of the key in the list if found, otherwise -1.
     """
-    if not lst:
+    if not sorted_list:
         return -1
-    if lst != sorted(lst):
+    if sorted_list != sorted(sorted_list):
         return -1
 
-    low, high = 0, len(lst) - 1
+    low, high = 0, len(sorted_list) - 1
     while low <= high:
         mid = (low + high) // 2
-        if lst[mid] == key:
+        if sorted_list[mid] == search_key:
             return mid
-        elif lst[mid] < key:
+        elif sorted_list[mid] < search_key:
             low = mid + 1
         else:
             high = mid - 1
