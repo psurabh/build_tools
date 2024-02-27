@@ -1,4 +1,14 @@
 def binary_search(lst, target):
+    """
+    Perform a binary search on a sorted list.
+
+    Parameters:
+    lst (list): The list to search.
+    target (int): The value to search for.
+
+    Returns:
+    int: The index of the target if found, None otherwise.
+    """
     low = 0
     high = len(lst) - 1
 
