@@ -3,6 +3,16 @@ This file implements a binary search algorithm.
 """
 
 def binary_search(lst, key):
+    """
+    Perform a binary search on a sorted list.
+
+    Parameters:
+    lst (list): The list to search.
+    key (int): The value to search for.
+
+    Returns:
+    int: The index of the key in the list if found, otherwise -1.
+    """
     if not lst:
         return -1
     if lst != sorted(lst):
