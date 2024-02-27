@@ -1,4 +1,15 @@
 def sliding_window(array, window_size):
+    """
+    This function takes an array and a window size as input, and returns a list of subarrays.
+    Each subarray represents a sliding window of the given size over the input array.
+
+    Parameters:
+    array (list): The input array.
+    window_size (int): The size of the sliding window.
+
+    Returns:
+    subarrays (list): A list of subarrays, each representing a sliding window over the input array.
+    """
     subarrays = []
     for i in range(len(array) - window_size + 1):
         subarray = array[i:i + window_size]
